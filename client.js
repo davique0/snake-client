@@ -1,3 +1,4 @@
+const { Server } = require("http");
 const net = require("net");
 //establishes a connection with the game server
 
@@ -12,7 +13,8 @@ const connect = function () {
 
   //prints a message when connections has been established
   conn.on("connect", () => {
-    console.log("Connected to server")
+    console.log("Connected to game server")
+    conn.write('Name: MDG')
   })
 
   conn.on("data", (data) => {
