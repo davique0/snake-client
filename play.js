@@ -15,6 +15,10 @@ const connect = function () {
     console.log("Connected to server")
   })
 
+  conn.on("data", (data) => {
+    console.log(data)
+  });
+
   return conn;
 };
 
