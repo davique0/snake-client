@@ -16,8 +16,8 @@ const connect = function () {
     console.log("Connected to game server")
     conn.write('Name: MDG')
     // conn.write('Move: up')
-    setTimeout(() => conn.write('Move: up'), 50)
-    setInterval(() => conn.write('Move: down'), 50)
+    // setTimeout(() => conn.write('Move: up'), 50)
+    // setInterval(() => conn.write('Move: down'), 50)
   })
 
   conn.on("data", (data) => {
