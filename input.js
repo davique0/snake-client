@@ -5,7 +5,6 @@ let connection;
 
 const setupInput = (conn) => {
   connection = conn;
-  console.log(connection);
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
@@ -35,18 +34,15 @@ const handleUserInput = (data) => {
     case 'd':
       connection.write('Move: right');
       break;
+    case 'l':
+      connection.write('Say: LOL');
+      break;
+    case 'n':
+      connection.write('Say: Nice Move');
+      break;
+    case 'b':
+      connection.write('Say: Be Right Back')
   }
-  
-  // if ( data === '\u0003' ) {
-  //   // ctrl-c ( end of text )
-  //   console.log('user exits')
-  //   process.exit();
-  // }
-  
-  // if(data === 'w') {
-  //   console.log('Move :up')
-  // }
-
 };
 
 module.exports = {setupInput};
