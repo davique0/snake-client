@@ -42,3 +42,18 @@ Unfortunatelly every game must come to an end, only use Ctrl + c to exit the pro
 ## Snake Server
 
 Snake server is found [here](https://github.com/lighthouse-labs/snek-multiplayer)
+
+## Adding Broadcasting Messages in  Server
+
+To add messages from the server to clients every time a new client enters the server and the current number of users please add the following line to the server code on ./snek-multiplayer/Remoteinterface.js on line 61:
+
+```javascript
+for (const user of this.clients) {
+      user.write('New user has joined\n')
+      user.write(`Number of players: ${this.clients.length}`)
+    }
+```
+
+!["Adding code to server for multiplayer"](./server_to_broadcast.png)
+
+
