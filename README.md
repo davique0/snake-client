@@ -17,3 +17,28 @@ Before you can run this client, you will need to be running the server side whic
 
 - Follow steps inside the snek server repo to run the server side
 - Run the development snake client using the `node play.js` command.
+
+## How to play
+
+Move the snake to "eat" the "food" in the screen, the more food the snake eats the bigger it gets.
+
+- Use 'w' to move up
+- Use 'a' to move left
+- Use 's' to move down
+- Use 'd' to move right
+
+## Messages
+
+Client snake has pre determined mesagges to interact with other users, just use one of the following keys to send the message:
+
+- Use 'l' to send: LOL
+- Use 'n' to send: Nice Move
+- Use 'b' to send: Be right back
+
+## How to end the game
+
+Unfortunatelly every game must come to an end, only use Ctrl + c to exit the program on the client side.
+
+## Snake Server
+
+Snake server is found [here](https://github.com/lighthouse-labs/snek-multiplayer)
